@@ -1,17 +1,11 @@
 import { combineReducers } from 'redux';
 
-import buyOneDonutReducer from './buyOneDonatReducer';
-import makeOneDonutReducer from './makeOneDonutReducer';
-import buyOneCakeReducer from './buyOneCakeReducer';
-import makeOneCakeReducer from './makeOneCakeReducer';
-// Import all reducer
+import productReducers from './buyProductReducer';
+import saldoReducers from './saldoReducer';
 
-// Combine all reducer
 const rootReducer = combineReducers({
-  bahanDonut: makeOneDonutReducer,
-  bahanCake: makeOneCakeReducer,
-  donut: buyOneDonutReducer,
-  cake: buyOneCakeReducer,
+  product: productReducers,
+  saldo: saldoReducers,
 })
 
 export default rootReducer;
